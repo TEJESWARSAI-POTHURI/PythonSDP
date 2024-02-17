@@ -4,9 +4,20 @@ from django.db import models
 
 
 class Sankar(models.Model):
-    name=models.CharField(max_length=100)
+    FirstName=models.CharField(max_length=100)
+   # LastName=models.CharField(max_length=100)
     email=models.EmailField(primary_key=True)
+   # DOB=models.DateField
     password=models.CharField(max_length=100)
     phonenumber=models.IntegerField()
+  #
+   # Gender = [
+  #      ('male', 'Male'),
+  #      ('female', 'Female'),
+   #     ('other', 'Other'),
+    #]
+    #Gender = models.CharField(max_length=20, choices=Gender)
+    #'''
+
     class Meta:
         db_table="Sankar" #To show the table name to the user
