@@ -308,12 +308,12 @@ table td {
         <div id="flight-depart">
           <div class="info-box">
             <label for="">LEAVING FROM</label>
-            <input type="text" id="dep-from" />
+            <input type="text" id="dep-from"  required >
             <div id="depart-res"></div>
           </div>
           <div class="info-box" id="arrive-box">
             <label for="">ARRIVING AT</label>
-            <input type="text" id="dep-to" />
+            <input type="text" id="dep-to"   required >
             <div id="arrive-res"></div>
           </div>
         </div>
@@ -326,7 +326,7 @@ table td {
           </div>
           <div class="info-box" id="return-box">
             <label for="">RETURNING ON</label>
-            <input type="date" id="return-date"  />
+            <input type="date" id="return-date"  required>
           </div>
         </div>
 
@@ -334,7 +334,7 @@ table td {
         <div id="flight-info">
           <div class="info-box">
             <label for="adults">ADULTS</label>
-            <select name="adults" id="adults">
+            <select name="adults" id="adults" required>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -345,7 +345,7 @@ table td {
           </div>
           <div class="info-box">
             <label for="children">CHILDREN</label>
-            <select name="children" id="children">
+            <select name="children" id="children" required>
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="0">2</option>
@@ -355,7 +355,7 @@ table td {
           </div>
           <div class="info-box">
             <label for="class-type">CLASS</label>
-            <select name="class-type" id="class-type">
+            <select name="class-type" id="class-type" required>
               <option value="Economy">ECONOMY</option>
               <option value="Business">BUSINESS</option>
               <option value="First">FIRST CLASS</option>
