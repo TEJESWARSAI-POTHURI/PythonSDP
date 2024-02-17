@@ -22,18 +22,19 @@ def login(request):
     return render(request,'loginpage.html')
 def reg(request):
     return render(request,'registerPage.html')
-def regfun(request):
-    if(request.method=='POST'):
+def registerloginfunction(request):
+    if request.method=='POST':
         name=request.POST.get('name')
         email=request.POST.get('email')
-        phonenumber=request.POST.get('phonenummber')
         password=request.POST.get('password')
+        phonenumber=request.POST.get('phonenumber')
 
-        if Register.objects.filter(email=email).exists():
-            return HttpResponse("email already exists ")
-        Register.objects.create(name=name,email=email,phonenumber=phonenumber,password=password)
+        if Sankar.objects.filter(email=email).exists():
+            return HttpResponse("Email already registered. Choose a different email.")
+
+        Sankar.objects.create(name=name,email=email,password=password,phonenumber=phonenumber)
         return redirect('home')
-    return render(request,'registerpage')
+    return render(request,'registerpage.html')
 
 
 def customer(request):

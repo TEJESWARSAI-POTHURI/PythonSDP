@@ -10,6 +10,6 @@ urlpatterns = [
     path('book',ticks,name='book'),
     path('login',login,name='login'),
     path('register',reg,name='register'),
-    path('registerfunction',regfun,name='regfun'),
+    path('registerloginfunction',registerloginfunction,name='registerloginfunction'),
     path('customer',customer,name='customer'),
     ]

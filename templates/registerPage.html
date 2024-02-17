@@ -14,7 +14,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
-<form class="form-horizontal" action="{% url 'regfun' %}" method="POST">
+<form class="form-horizontal" action="{% url 'registerloginfunction' %}" method="POST">
     {% csrf_token %}
   <fieldset>
           {% csrf_token %}
@@ -59,7 +59,7 @@
     <div class="control-group">
       <!-- Button -->
       <div class="controls">
-        <button class="btn btn-success" type="submit" >Register</button>
+        <button class="btn btn-success" type="submit">Register</button>
       </div>
     </div>
   </fieldset>
@@ -68,9 +68,7 @@
 </div>
 </div>
 <br><br>
-<div>
-    <h6>Source (Register Form) Available in this link - https://bootsnipp.com/snippets/k7A</h6>
-</div>
+
 {% endblock %}
 
 </html>
