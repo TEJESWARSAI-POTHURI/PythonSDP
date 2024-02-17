@@ -24,15 +24,18 @@ def reg(request):
     return render(request,'registerPage.html')
 def registerloginfunction(request):
     if request.method=='POST':
-        name=request.POST.get('name')
+        FirstName=request.POST.get('FirstName')
+       # LastName=request.POST.get('LastName')
         email=request.POST.get('email')
+       # DOB=request.POST.get('DOB')
         password=request.POST.get('password')
         phonenumber=request.POST.get('phonenumber')
+        Gender=request.POST.get('Gender')
 
         if Sankar.objects.filter(email=email).exists():
             return HttpResponse("Email already registered. Choose a different email.")
 
-        Sankar.objects.create(name=name,email=email,password=password,phonenumber=phonenumber)
+        Sankar.objects.create(FirstName=FirstName,  email=email, password=password, phonenumber=phonenumber, )
         return redirect('home')
     return render(request,'registerpage.html')
 
