@@ -1,3 +1,5 @@
+
+
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
@@ -22,25 +24,26 @@ def login(request):
     return render(request,'loginpage.html')
 def reg(request):
     return render(request,'registerPage.html')
-def registerloginfunction(request):
+def regfun(request):
     if request.method=='POST':
         FirstName=request.POST.get('FirstName')
-       # LastName=request.POST.get('LastName')
         email=request.POST.get('email')
-       # DOB=request.POST.get('DOB')
+        dob=request.POST.get('DOB')
         password=request.POST.get('password')
-        phonenumber=request.POST.get('phonenumber')
-        Gender=request.POST.get('Gender')
+        repassword = request.POST.get('repassword')
+        mobile=request.POST.get('mobile')
+        gender=request.POST.get('Gender')
 
-        if Sankar.objects.filter(email=email).exists():
+        if User.objects.filter(email=email).exists():
             return HttpResponse("Email already registered. Choose a different email.")
 
-        Sankar.objects.create(FirstName=FirstName,  email=email, password=password, phonenumber=phonenumber, )
+        User.objects.create(first_name=FirstName,  email=email,dob=dob, password=password, repassword=repassword, mobile=mobile,gender=gender )
         return redirect('home')
     return render(request,'registerpage.html')
 
 
 def customer(request):
     return render(request,'customercare.html')
+
 
 

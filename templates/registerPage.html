@@ -89,10 +89,11 @@ button {
 		href="style.css"> 
 </head> 
 
-<body> 
+<body>
+{% csrf_token %}
 	<div class="main"> 
 		<h1>Register </h1>
-		<form action="{%url 'regfun'%}">
+		<form action="{% url 'regfun' %}" method="POST">
 			<label for="first">First Name:</label> 
 			<input type="text" id="first"
 				name="first"
