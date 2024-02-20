@@ -1,23 +1,22 @@
+
 from django.db import models
 
-# Create your models here.
+class User(models.Model):
+    first_name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    dob = models.CharField(max_length=10)
+    password = models.CharField(max_length=100)  # Consider using Django's built-in User model for authentication
+    repassword = models.CharField(max_length=100)  # Assuming this is for password confirmation
+    mobile = models.CharField(max_length=10)  # Assuming Indian phone numbers, change accordingly
+    GENDER_CHOICES = [
+        ('male', 'Male'),
+        ('female', 'Female'),
+        ('other', 'Other'),
+    ]
+    gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
 
-
-class Sankar(models.Model):
-    FirstName=models.CharField(max_length=100)
-   # LastName=models.CharField(max_length=100)
-    email=models.EmailField(primary_key=True)
-   # DOB=models.DateField
-    password=models.CharField(max_length=100)
-    phonenumber=models.IntegerField()
-  #
-   # Gender = [
-  #      ('male', 'Male'),
-  #      ('female', 'Female'),
-   #     ('other', 'Other'),
-    #]
-    #Gender = models.CharField(max_length=20, choices=Gender)
-    #'''
+    def __str__(self):
+        return self.first_name  # or any other meaningful representation
 
     class Meta:
-        db_table="Sankar" #To show the table name to the user
+        db_table = "User"  # To specify the table name
