@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 from .models import *
-
+from django.views.decorators.csrf import csrf_exempt
 
 def home(request):
     return render(request,'home.html')
@@ -24,6 +24,8 @@ def login(request):
     return render(request,'loginpage.html')
 def reg(request):
     return render(request,'registerPage.html')
+
+@csrf_exempt
 def regfun(request):
     if request.method=='POST':
         FirstName=request.POST.get('FirstName')
