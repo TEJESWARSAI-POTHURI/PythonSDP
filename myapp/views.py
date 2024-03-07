@@ -25,27 +25,40 @@ def login(request):
 def reg(request):
     return render(request,'registerPage.html')
 
-@csrf_exempt
+
 def regfun(request):
     if request.method=='POST':
-        FirstName=request.POST.get('FirstName')
+        username=request.POST.get('username')
         email=request.POST.get('email')
-        dob=request.POST.get('DOB')
         password=request.POST.get('password')
-        repassword = request.POST.get('repassword')
-        mobile=request.POST.get('mobile')
-        gender=request.POST.get('Gender')
 
-        if User.objects.filter(email=email).exists():
+        if Register.objects.filter(email=email).exists():
             return HttpResponse("Email already registered. Choose a different email.")
+        Register.objects.create(username=username,  email=email,password=password)
+        return render(request, 'loginpage.html')
+    return render(request,'loginpage.html')
 
-        User.objects.create(first_name=FirstName,  email=email,dob=dob, password=password, repassword=repassword, mobile=mobile,gender=gender )
-        return redirect('home')
-    return render(request,'registerpage.html')
+
+from datetime import datetime
+def loginfun(request):
+    if request.method=='POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        if Register.objects.filter(username=username,password=password).exists():
+            Login.objects.create(username=username, password=password)
+            return render(request,'home.html')
+        return HttpResponse("User Name or Password is Incorrect")
+    return render(request, 'loginpage.html')
+
+
+
 
 
 def customer(request):
     return render(request,'customercare.html')
+def payment(request):
+    return render(request,'payment.html')
 
 
 

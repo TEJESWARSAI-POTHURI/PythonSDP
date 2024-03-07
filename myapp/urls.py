@@ -12,4 +12,6 @@ urlpatterns = [
     path('register/',reg,name='register'),
     path('regfun/',regfun,name='regfun'),
     path('customer/',customer,name='customer'),
+    path('pay',payment,name='payment'),
+    path('loginfun',loginfun,name='loginfun'),
     ]

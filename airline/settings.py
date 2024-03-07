@@ -82,6 +82,33 @@ DATABASES = {
 }
 
 
+'''
+#SS Postgre Sql
+DATABASES = {
+    'default' : {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'airline',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',
+        'PORT': '5433',
+    }
+}
+'''
+
+'''
+# myproject/settings.py
+DATABASES = {
+ 'default': {
+ 'ENGINE': 'djongo',
+ 'NAME': 'ss', # Your MongoDB database name
+ 'CLIENT': {
+       'host':'mongodb+srv://saisankar:system@cluster0.gv6neug.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+          },
+ }
+}
+'''
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
