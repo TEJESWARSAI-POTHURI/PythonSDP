@@ -59,6 +59,28 @@ def customer(request):
     return render(request,'customercare.html')
 def payment(request):
     return render(request,'payment.html')
+from django.http import HttpResponse
+import qrcode
+from io import BytesIO
+'''
+def netbank(request):
+    data = "https://www.phonepe.com/"
+    qr = qrcode.QRCode(version=1, box_size=10, border=5)
+    qr.add_data(data)
+    qr.make(fit=True)
+    qr_img = qr.make_image(fill_color='blue', back_color='white')
+
+    # Saving the image to a BytesIO object
+    buffer = BytesIO()
+    qr_img.save(buffer, format='PNG')
+    buffer.seek(0)
+
+    # Creating an HttpResponse object with the image content
+    response = HttpResponse(buffer.getvalue(), content_type='image/png')
+
+    return response
+
+'''
 
 def social(request):
     return render(request,'socialmedia.html')
