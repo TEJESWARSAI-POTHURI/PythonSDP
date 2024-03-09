@@ -347,6 +347,7 @@ table td {
 <div class="container">
     <h1>Flight Ticket Booking</h1>
     <form action="#" method="post">
+        {% csrf_token %}
         <label for="fullname">Full Name:</label>
         <input type="text" id="fullname" name="fullname" required>
 
@@ -379,7 +380,7 @@ table td {
         <label for ="date">Return Date:</label>
         <input type="date" id ="date" name="date" required>x
 
-        <input type="submit" value="Book Now">
+        <a href="{%url 'flights'%}"><input type="submit" value="Book Now"></a>
     </form>
 </div> 
 

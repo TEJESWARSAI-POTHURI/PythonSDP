@@ -1,5 +1,4 @@
-
-
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
@@ -56,8 +55,12 @@ def loginfun(request):
         return HttpResponse("User Name or Password is Incorrect")
     return render(request, 'loginpage.html')
 
-
-
+@login_required(login_url='login')
+def adminhome(request):
+    name1 = 'admin'
+    a2 = {'name1': name1}
+    return render(request, 'adminhomepage.html', a2)
+@login_required(login_url='login')
 def phonepay(request):
     img1 = {'pp': '/static/img.png'}
     return render(request, 'phonepay.html', img1)
@@ -66,6 +69,8 @@ def phonepay(request):
 
 def customer(request):
     return render(request,'customercare.html')
+
+@login_required(login_url='login')
 def payment(request):
     return render(request,'payment.html')
 from django.http import HttpResponse
@@ -91,12 +96,14 @@ def netbank(request):
 
 '''
 
+
 def social(request):
     return render(request,'socialmedia.html')
 
 def offers(request):
     return render(request,'offers.html')
 
+@login_required(login_url='login')
 def tickets(request):
     return render(request,'ticket.html')
 
