@@ -84,5 +84,8 @@ def netbank(request):
 def social(request):
     return render(request,'socialmedia.html')
 
+def offers(request):
+    return render(request,'offers.html')
+
 
 
