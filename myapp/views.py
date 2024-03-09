@@ -39,15 +39,14 @@ def regfun(request):
     return render(request,'loginpage.html')
 
 
-from datetime import datetime
+
 def loginfun(request):
     if request.method=='POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-
         if Register.objects.filter(username=username,password=password).exists():
-            Login.objects.create(username=username, password=password)
-            return render(request,'home.html')
+           Login.objects.create(username=username, password=password)
+           return render(request,'home.html')
         return HttpResponse("User Name or Password is Incorrect")
     return render(request, 'loginpage.html')
 
