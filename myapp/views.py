@@ -56,7 +56,10 @@ def loginfun(request):
         return HttpResponse("User Name or Password is Incorrect")
     return render(request, 'loginpage.html')
 
-
+def adminhome(request):
+    name1 = 'admin'
+    a2 = {'name1': name1}
+    return render(request, 'adminhomepage.html', a2)
 
 def phonepay(request):
     img1 = {'pp': '/static/img.png'}

@@ -11,6 +11,7 @@ def insert_emp(request):
         FlightName = request.POST['FlightName']
         FlightSource = request.POST['FlightSource']
         FlightDestination = request.POST['FlightDestination']
+
         data = Flight(FlightId=FlightId, FlightName=FlightName, FlightSource=FlightSource, FlightDestination=FlightDestination)
         data.save()
         return redirect('show-emp')

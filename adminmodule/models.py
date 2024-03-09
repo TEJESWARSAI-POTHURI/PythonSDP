@@ -5,6 +5,7 @@ class Flight(models.Model):
     FlightName = models.CharField(max_length=200)
     FlightSource = models.CharField(max_length=10)
     FlightDestination = models.CharField(max_length=150)
+
     class Meta:
         db_table="Flight"
 
