@@ -15,6 +15,7 @@ urlpatterns = [
     path('pay',payment,name='payment'),
     path('loginfun',loginfun,name='loginfun'),
     path('social',social,name='social'),
+    path('phonepay',phonepay,name='phonepay'),
    # path('netbank',netbank,name='netbank')
     path('offers',offers,name='offers'),
     ]

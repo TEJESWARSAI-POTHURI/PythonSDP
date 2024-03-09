@@ -51,6 +51,9 @@ def loginfun(request):
     return render(request, 'loginpage.html')
 
 
+def phonepay(request):
+    img1 = {'pp': '/static/img.png'}
+    return render(request, 'phonepay.html', img1)
 
 
 
