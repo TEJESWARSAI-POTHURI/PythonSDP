@@ -44,11 +44,18 @@ def loginfun(request):
     if request.method=='POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-        if Register.objects.filter(username=username,password=password).exists():
+        if username=='admin' and password=='admin':
+            name1 = 'admin'
+            a2 = {'name1': name1}
+            return render(request, 'adminhomepage.html', a2)
+        elif Register.objects.filter(username=username,password=password).exists():
            Login.objects.create(username=username, password=password)
-           return render(request,'home.html')
+           name1 = username
+           a2 = {'name1': name1}
+           return render(request, 'userhomepage.html', a2)
         return HttpResponse("User Name or Password is Incorrect")
     return render(request, 'loginpage.html')
+
 
 
 def phonepay(request):
