@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'adminmodule',
+    'usermodule',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +85,7 @@ DATABASES = {
 '''
 
 
-
+'''
 #Tej Postgre Sql
 DATABASES = {
     'default' : {
@@ -109,7 +111,7 @@ DATABASES = {
         'PORT': '5433',
     }
 }
-'''
+
 
 
 
