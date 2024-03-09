@@ -83,8 +83,8 @@ DATABASES = {
 '''
 
 
-
-#SS Postgre Sql
+'''
+#Tej Postgre Sql
 DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.postgresql',
@@ -95,16 +95,26 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
-
 '''
-<<<<<<< HEAD
 
-'''
+
+#SS Postgre Sql
+DATABASES = {
+    'default' : {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'airline',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',
+        'PORT': '5433',
+    }
+}
+
+
+
+
 # MongoDB
-=======
-# myproject/settings.py
->>>>>>> b92980f2441ae74579879bd035b3e38df5c2c3a3
+'''
 DATABASES = {
  'default': {
  'ENGINE': 'djongo',
@@ -135,7 +145,7 @@ DATABASES = {
 }
 '''
 
-'''
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
