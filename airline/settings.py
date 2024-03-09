@@ -97,8 +97,8 @@ DATABASES = {
 }
 '''
 
-
-# myproject/settings.py
+'''
+# MongoDB
 DATABASES = {
  'default': {
  'ENGINE': 'djongo',
@@ -108,6 +108,26 @@ DATABASES = {
           },
  }
 }
+'''
+
+
+'''
+#My Sql Db Pythonanywhere
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'saisankar4$airline',
+        'USER': 'saisankar4',
+        'PASSWORD': 'tejeswarsai',
+        'HOST': 'saisankar4.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
+
+    }
+}
+'''
 
 
 # Password validation
