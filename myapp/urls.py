@@ -18,4 +18,6 @@ urlpatterns = [
     path('phonepay',phonepay,name='phonepay'),
    # path('netbank',netbank,name='netbank')
     path('offers',offers,name='offers'),
+    path('tickets',tickets,name='tickets'),
+
     ]

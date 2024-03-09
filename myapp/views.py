@@ -97,5 +97,8 @@ def social(request):
 def offers(request):
     return render(request,'offers.html')
 
+def tickets(request):
+    return render(request,'ticket.html')
+
 
 
