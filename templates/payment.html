@@ -132,10 +132,8 @@
         <div class="last-content">
 
             <button type="button" class="pay-now-btn">Apply Coupons</button>
-            <button type="button" class="pay-now-btn" onclick="<img src="static/img.png">Pay with Netbanking</button>
-
-            <img id="qr-image" src="static/img.png" alt="QR Code">
-
+            <a href="{% url 'phonepay' %}">
+            <button type="button" class="pay-now-btn">Pay with UPI</button> </a>
             <!-- <button type="button" class="pay-now-btn">Netbanking options</button> -->
         </div>
 
