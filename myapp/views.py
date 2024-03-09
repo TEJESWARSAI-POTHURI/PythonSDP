@@ -60,5 +60,8 @@ def customer(request):
 def payment(request):
     return render(request,'payment.html')
 
+def social(request):
+    return render(request,'socialmedia.html')
+
 
 
