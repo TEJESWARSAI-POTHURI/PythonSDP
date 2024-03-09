@@ -57,7 +57,7 @@ ROOT_URLCONF = 'airline.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates','adminmodule/crud_templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
