@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 02f6610b323b5122e371a0b3cba82686ea299e95
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Reservation Offers</title>
     <style>
+        <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -41,10 +45,12 @@
         .offer:hover {
             background-color: #e0e0e0;
         }
+
     </style>
 </head>
 <body>
-    <div class="container">
+{% block body%}
+    <div class="container" align="center">
         <h1>Flight Reservation Offers</h1>
 
         <a href="{%url 'payment'%}" class="offer">
@@ -62,8 +68,9 @@
             <p>Receive a special discount voucher for jewelry purchases upon booking your flight.</p>
         </a>
 
-        <!-- Add more offers here -->
+        <!-- Add more offers here -->
 
-    </div>
+</div>
+{% endblock%}
 </body>
 </html>
