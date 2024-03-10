@@ -1,5 +1,4 @@
-
-
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
@@ -61,6 +60,7 @@ def adminhome(request):
     a2 = {'name1': name1}
     return render(request, 'adminhomepage.html', a2)
 
+#@login_required(login_url='login')
 def phonepay(request):
     img1 = {'pp': '/static/img.png'}
     return render(request, 'phonepay.html', img1)
@@ -69,6 +69,8 @@ def phonepay(request):
 
 def customer(request):
     return render(request,'customercare.html')
+
+#@login_required(login_url='login')
 def payment(request):
     return render(request,'payment.html')
 from django.http import HttpResponse
