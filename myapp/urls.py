@@ -19,8 +19,7 @@ urlpatterns = [
    # path('netbank',netbank,name='netbank')
     path('offers',offers,name='offers'),
     path('tickets',tickets,name='tickets'),
-
-
+    path('logout/', logout_view, name='logout'),
     path('adminhome/',adminhome,name='adminhome'),
 
     ]

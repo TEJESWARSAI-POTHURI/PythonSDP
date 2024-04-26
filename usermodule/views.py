@@ -46,6 +46,13 @@ def otp(request):
     if request.method == 'POST':
         email=request.POST.get('email')
 
+        # mail
+        recipient_email = email
+        subject = 'Regarding Flight Tickets'  # Set your subject here
+        message_body = 'Hello, ' + '\n' + '\n' + '\n' + '\n' + '\n' + 'This is your Confirmation Mail regarding your flight tickets.\n'   # Set your email content here
+        send_mail(subject,message_body,  'saisankar3193@gmail.com',[recipient_email],fail_silently=False,)
+
+
         recipient_email = [email]
         print(f'Sent email to {recipient_email}')
         subject='Ticket Confirmation'
@@ -54,8 +61,6 @@ def otp(request):
 
         send_mail(subject,message,from_email,recipient_email)
         print(f'Sent email to {recipient_email}')
-
-
         return redirect(thankyou)
     else:
         return render(request,'email.html')

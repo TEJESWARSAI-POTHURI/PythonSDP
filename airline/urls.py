@@ -20,13 +20,17 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from airline import settings
 
 urlpatterns = [
+
+
     path('admin/', admin.site.urls),
     path('',include('myapp.urls')),
     path('user/',include('usermodule.urls')),
     path('admin1/',include('adminmodule.urls')),
+
+
+
 ]
 
 

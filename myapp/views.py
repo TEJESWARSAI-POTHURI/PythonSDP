@@ -1,3 +1,4 @@
+from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
@@ -61,9 +62,7 @@ def adminhome(request):
     a2 = {'name1': name1}
     return render(request, 'adminhomepage.html', a2)
 
-@login_required(login_url='login')
 
-#@login_required(login_url='login')
 
 def phonepay(request):
     img1 = {'pp': '/static/img.png'}
@@ -114,5 +113,22 @@ def offers(request):
 def tickets(request):
     return render(request,'ticket.html')
 
+# views.py
+from django.shortcuts import render
+
+def my_view(request):
+    # Set session data
+    request.session['username'] = 'john'
+
+    # Access session data
+    username = request.session.get('username')
+
+    # Your view logic here
+    return render(request, 'template_name.html', {'username': username})
 
 
+from django.shortcuts import redirect
+
+def logout_view(request):
+    logout(request)
+    return redirect('home')  # Assuming 'home' is the name of your homepage URL pattern
