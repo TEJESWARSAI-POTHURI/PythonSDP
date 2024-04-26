@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.templatetags.static import static
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 from airline import settings
 
@@ -26,3 +28,7 @@ urlpatterns = [
     path('user/',include('usermodule.urls')),
     path('admin1/',include('adminmodule.urls')),
 ]
+
+
+if settings.DEBUG:
+  urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_URL)
