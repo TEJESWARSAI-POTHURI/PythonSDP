@@ -7,15 +7,18 @@ class Feedback(models.Model):
     Comments=models.CharField(max_length=100)
     class meta:
         db_table="Feedback" #To show the table name to the user
-'''
-class Flight(models.Model):
+
+class passenger(models.Model):
     name=models.CharField(max_length=100)
     email=models.CharField(max_length=100)
     destination=models.CharField(max_length=100)
-    boardingpoint=models.CharField(max_length=100)
-    numberofpersons=models.CharField(max_length=100)
-    weight=models.CharField(max_length=100)
+    boarding=models.CharField(max_length=100)
+    persons=models.CharField(max_length=100)
+    luggage=models.CharField(max_length=100)
+    fromdate=models.CharField(max_length=100)
+    todate=models.CharField(max_length=100)
+
 
     class meta:
-        db_table="Passenger_details" #to know the user details 
-'''
+        db_table="passenger" #to know the user details
+

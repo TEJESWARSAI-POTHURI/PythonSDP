@@ -61,3 +61,14 @@ def remove_emp(request, pk):
     }
 
     return render(request, 'delete.html', context)
+
+from usermodule.models import *
+
+def feedshow(request):
+    feed=Feedback.objects.all()
+    return render(request,'feedshow.html',{'feed':feed})
+
+
+def bookshow(request):
+    book=passenger.objects.all()
+    return render(request,'applicationdetails.html',{'book':book})

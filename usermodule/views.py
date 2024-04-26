@@ -22,6 +22,14 @@ def feedbacksave(request):
         email = request.POST.get('email')
         Comments = request.POST.get('Comments')
         Feedback.objects.create(name=name, email=email, Comments=Comments)
+        subject = 'Feed Back Information'
+        message = 'Thank You for sharing Feed Back with Us. \n \n \n \nComments: '+Comments
+        from_email = 'saisankar3193@gmail.com'
+        recipient_email = [email]
+
+        send_mail(subject, message, from_email, recipient_email)
+
+
         return redirect('homeuser')
     return render(request, 'feedbackform.html')
 
@@ -54,3 +62,23 @@ def otp(request):
 
 def thankyou(request):
     return render(request,'thankyou.html')
+
+def bookdetails(request):
+    if request.method=='POST':
+        name=request.POST.get('name')
+        email = request.POST.get('email')
+        destination = request.POST.get('destination')
+        boarding = request.POST.get('boarding')
+        persons = request.POST.get('persons')
+        luggage = request.POST.get('luggage')
+        fromdate = request.POST.get('fromdate')
+        todate = request.POST.get('todate')
+        passenger.objects.create(name=name,email=email,destination=destination,boarding=boarding,persons=persons,luggage=luggage,fromdate=fromdate,todate=todate)
+        flight=Flight.objects.all()
+        return render(request,'guestuserflight.html',{'flight':flight})
+    else:
+        return redirect(home)
+
+def vifeed(request):
+    feed=Feedback.objects.all()
+    return render(request,'vifeed.html',{'feed':feed})

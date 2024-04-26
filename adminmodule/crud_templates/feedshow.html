@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'adminnavbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feed Back Details</title>
+</head>
+<body>
+{% block body%}
+<h1>Feed Back Details</h1>
+<table border="2">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Comments</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for job_application in feed %}
+  <tr>
+    <td> {{ job_application.name}}</td>
+    <td> {{ job_application.email}}</td>
+    <td> {{ job_application.Comments}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<style>
+  table,th,td{
+  border:2px solid black;
+  }
+</style>
+{% endblock %}
+</body>
+</html>

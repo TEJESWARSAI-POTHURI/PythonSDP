@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% extends 'adminnavbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Applications</title>
+</head>
+<body>
+{% block body%}
+<h1>User Booking Details</h1>
+<table border="2">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Destination</th>
+    <th>Boarding</th>
+    <th>Number of Persons</th>
+    <th>Luggage</th>
+    <th>From Date</th>
+    <th>To Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for job_application in book %}
+  <tr>
+    <td> {{ job_application.name}}</td>
+    <td> {{ job_application.email}}</td>
+    <td> {{ job_application.destination}}</td>
+    <td> {{ job_application.boarding}}</td>
+    <td> {{ job_application.persons}}</td>
+    <td> {{ job_application.luggage}}</td>
+    <td> {{ job_application.fromdate}}</td>
+    <td> {{ job_application.todate}}</td>
+
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<style>
+  table,th,td{
+  border:2px solid black;
+  }
+</style>
+{% endblock %}
+</body>
+</html>
