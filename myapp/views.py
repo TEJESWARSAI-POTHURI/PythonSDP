@@ -62,9 +62,7 @@ def adminhome(request):
     a2 = {'name1': name1}
     return render(request, 'adminhomepage.html', a2)
 
-@login_required(login_url='login')
 
-#@login_required(login_url='login')
 
 def phonepay(request):
     img1 = {'pp': '/static/img.png'}

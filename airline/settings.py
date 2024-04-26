@@ -102,7 +102,10 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-=======
+
+
+
+'''
 # #Tej Postgre Sql
 # DATABASES = {
 #     'default' : {
@@ -114,9 +117,9 @@ DATABASES = {
 #         'PORT': '5432',
 #     }
 # }
+'''
 
-
-
+'''
 
 #SS Postgre Sql
 DATABASES = {
@@ -129,7 +132,7 @@ DATABASES = {
         'PORT': '5433',
     }
 }
-
+'''
 
 
 # MongoDB
