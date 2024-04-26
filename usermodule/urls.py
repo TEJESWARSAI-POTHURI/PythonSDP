@@ -7,5 +7,6 @@ urlpatterns = [
     path('feedbacksave/', feedbacksave, name='feedbacksave'),
     path('showbooking/',showbooking,name='showbooking'),
     path('payme',payme,name='payme'),
+    path('otp',otp,name='otp'),
     path('thanlyou',thankyou,name='thankyou'),
     ]

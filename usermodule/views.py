@@ -1,3 +1,6 @@
+import string
+from random import random
+
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 
@@ -28,6 +31,24 @@ def showbooking(request):
 
 def payme(request):
     return render(request,'payme.html')
+
+def otp(request):
+
+    if request.method == 'POST':
+        email=request.POST.get('email')
+        # mail
+        recipient_email = email
+        subject = 'Regarding Flight Tickets'  # Set your subject here
+        message_body = 'Hello, ' + '\n' + '\n' + '\n' + '\n' + '\n' + 'This is your Confirmation Mail regarding your flight tickets.\n'   # Set your email content here
+        send_mail(
+        subject,
+        message_body,
+        'saisankar3193@gmail.com',
+        [recipient_email],
+        fail_silently=False,)
+        return redirect(thankyou)
+    else:
+        return render(request,'email.html')
 
 def thankyou(request):
     return render(request,'thankyou.html')

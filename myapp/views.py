@@ -75,7 +75,7 @@ def customer(request):
     return render(request,'customercare.html')
 
 
-@login_required(login_url='login')
+
 
 #@login_required(login_url='login')
 
@@ -111,7 +111,6 @@ def social(request):
 def offers(request):
     return render(request,'offers.html')
 
-@login_required(login_url='login')
 def tickets(request):
     return render(request,'ticket.html')
 
