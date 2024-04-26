@@ -40,12 +40,7 @@ def otp(request):
         recipient_email = email
         subject = 'Regarding Flight Tickets'  # Set your subject here
         message_body = 'Hello, ' + '\n' + '\n' + '\n' + '\n' + '\n' + 'This is your Confirmation Mail regarding your flight tickets.\n'   # Set your email content here
-        send_mail(
-        subject,
-        message_body,
-        'saisankar3193@gmail.com',
-        [recipient_email],
-        fail_silently=False,)
+        send_mail(subject,message_body,  'saisankar3193@gmail.com',[recipient_email],fail_silently=False,)
         return redirect(thankyou)
     else:
         return render(request,'email.html')

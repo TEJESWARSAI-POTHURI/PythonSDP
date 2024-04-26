@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SESSION_COOKIE_AGE = 86400  # 24 hours in seconds
+
+SESSION_COOKIE_SECURE = True
 
 # Application definition
 
@@ -71,7 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'airline.wsgi.application'
-
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -90,6 +93,7 @@ DATABASES = {
 DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.postgresql',
+
         'NAME': 'airline',
         'USER': 'postgres',
         'PASSWORD': '2604',

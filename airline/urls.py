@@ -18,11 +18,15 @@ from django.contrib import admin
 from django.templatetags.static import static
 from django.urls import path, include
 
-from airline import settings
 
 urlpatterns = [
+
+
     path('admin/', admin.site.urls),
     path('',include('myapp.urls')),
     path('user/',include('usermodule.urls')),
     path('admin1/',include('adminmodule.urls')),
+
+
+
 ]
