@@ -78,38 +78,24 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-'''
+#
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 
-
-#Tej Postgre Sql
-DATABASES = {
-    'default' : {
-        'ENGINE': 'django.db.backends.postgresql',
-
-        'NAME': 'airline',
-        'USER': 'postgres',
-        'PASSWORD': '2604',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-
-
-
-'''
+#
+#
 # #Tej Postgre Sql
 # DATABASES = {
 #     'default' : {
 #         'ENGINE': 'django.db.backends.postgresql',
+#
 #         'NAME': 'airline',
 #         'USER': 'postgres',
 #         'PASSWORD': '2604',
@@ -117,55 +103,84 @@ DATABASES = {
 #         'PORT': '5432',
 #     }
 # }
-'''
+#
+#
+#
+# '''
+# # #Tej Postgre Sql
+# # DATABASES = {
+# #     'default' : {
+# #         'ENGINE': 'django.db.backends.postgresql',
+# #         'NAME': 'airline',
+# #         'USER': 'postgres',
+# #         'PASSWORD': '2604',
+# #         'HOST': 'localhost',
+# #         'PORT': '5432',
+# #     }
+# # }
+# '''
+#
+#
+#
+# # #SS Postgre Sql
+# # DATABASES = {
+# #     'default' : {
+# #         'ENGINE': 'django.db.backends.postgresql',
+# #         'NAME': 'airline',
+# #         'USER': 'postgres',
+# #         'PASSWORD': 'admin',
+# #         'HOST': 'localhost',
+# #         'PORT': '5433',
+# #     }
+# # }
+#
+#
+#
+# # MongoDB
+# '''
+# DATABASES = {
+#  'default': {
+#  'ENGINE': 'djongo',
+#  'NAME': 'ss', # Your MongoDB database name
+#  'CLIENT': {
+#        'host':'mongodb+srv://saisankar:system@cluster0.gv6neug.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+#           },
+#  }
+# }
+# '''
+#
+#
+# '''
+# #My Sql Db Pythonanywhere
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'saisankar4$airline',
+#         'USER': 'saisankar4',
+#         'PASSWORD': 'tejeswarsai',
+#         'HOST': 'saisankar4.mysql.pythonanywhere-services.com',
+#         'PORT': '3306',
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+#         }
+#
+#     }
+# }
+# '''
 
-'''
-
-#SS Postgre Sql
+#Railway Postgre
 DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'airline',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '5433',
+        'PASSWORD': 'nDmPISBodmZLQHlDiuyVncPUKPOTHpYK',
+        'HOST': 'viaduct.proxy.rlwy.net',
+        'PORT': '59117',
     }
 }
-'''
 
 
-# MongoDB
-'''
-DATABASES = {
- 'default': {
- 'ENGINE': 'djongo',
- 'NAME': 'ss', # Your MongoDB database name
- 'CLIENT': {
-       'host':'mongodb+srv://saisankar:system@cluster0.gv6neug.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
-          },
- }
-}
-'''
-
-
-'''
-#My Sql Db Pythonanywhere
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'saisankar4$airline',
-        'USER': 'saisankar4',
-        'PASSWORD': 'tejeswarsai',
-        'HOST': 'saisankar4.mysql.pythonanywhere-services.com',
-        'PORT': '3306',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
-
-    }
-}
-'''
 
 
 # Password validation
