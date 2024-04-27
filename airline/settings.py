@@ -80,12 +80,12 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 #
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 
@@ -168,17 +168,17 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 # }
 # '''
 
-#Railway Postgre
-DATABASES = {
-    'default' : {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'nDmPISBodmZLQHlDiuyVncPUKPOTHpYK',
-        'HOST': 'viaduct.proxy.rlwy.net',
-        'PORT': '59117',
-    }
-}
+# #Railway Postgre
+# DATABASES = {
+#     'default' : {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'nDmPISBodmZLQHlDiuyVncPUKPOTHpYK',
+#         'HOST': 'viaduct.proxy.rlwy.net',
+#         'PORT': '59117',
+#     }
+# }
 
 
 
