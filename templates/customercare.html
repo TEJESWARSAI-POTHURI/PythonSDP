@@ -11,8 +11,7 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-
-       <!----> background-image: url('https://th.bing.com/th/id/OIP.CSrLiVTgrdRZZkOM7zLRogHaFI?w=260&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'); /* Replace 'your-background-image.jpg' with the path to your image */
+        background-image: url('https://th.bing.com/th/id/OIP.CSrLiVTgrdRZZkOM7zLRogHaFI?w=260&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'); /* Replace 'your-background-image.jpg' with the path to your image */
         background-size: cover;
         width: 100%;
         height: 100%;
@@ -45,34 +44,70 @@
     .contact-info li {
         margin-bottom: 10px;
     }
-.text{
-color:black;
-}
+    .text {
+        color: black;
+    }
+    .flight-card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #fff;
+        width: calc(33.33% - 20px); /* Adjust the width of each card to fit 3 cards in a row */
+        margin-right: 20px; /* Add some margin between cards */
+        box-sizing: border-box; /* Include padding and border in the width calculation */
+        float: left; /* Float the cards to enable multiple cards in a row */
+    }
+    .flight-card:last-child {
+        margin-right: 0; /* Remove margin from the last card in a row */
+    }
+    .flight-card img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
 </style>
 <div class="navbar">
-        <h1>Customer Care</h1>
+    <h1>Customer Care</h1>
+</div>
+<div class="content">
+    <h2>Contact Information</h2>
+    <p class="text">If you have any questions, concerns, or feedback related to your flight reservation, please feel free to contact our customer care team:</p>
+    <div class="contact-info" >
+        <ul>
+            <li class="text"><strong>Email:</strong> <a href="mailto:eswarsai1668@gmail.com">eswarsai1668@gmail.com</a></li>
+            <li class="text"><strong>Phone:</strong> +91 9063256264</li>
+            <li class="text"><strong>Address:</strong> 123 Flight Reservation Street, City, Country</li>
+        </ul>
     </div>
-    <div class="content">
-        <h2>Contact Information</h2>
-        <p class="text">If you have any questions, concerns, or feedback related to your flight reservation, please feel free to contact our customer care team:</p>
-        <div class="contact-info" >
-            <ul>
-                <li  class="text"><strong>Email:</strong> <a href="mailto:eswarsai1668@gmail.com">eswarsai1668@gmail.com</a></li>
-                <li  class="text"><strong>Phone:</strong> +91 9063256264</li>
-                <li  class="text"><strong>Address:</strong> 123 Flight Reservation Street, City, Country</li>
-            </ul>
-        </div>
-        <h2>Working Hours</h2>
-        <p class="text">Our customer care team is available to assist you during the following hours:</p>
-        <p  class="text"><strong>Monday - Friday:</strong> 9:00 AM - 7:00 PM (local time)</p>
-        <p  class="text"><strong>Saturday - Sunday:</strong> 10:00 AM - 4:00 PM (local time)</p>
+    <h2>Working Hours</h2>
+    <p class="text">Our customer care team is available to assist you during the following hours:</p>
+    <p class="text"><strong>Monday - Friday:</strong> 9:00 AM - 7:00 PM (local time)</p>
+    <p class="text"><strong>Saturday - Sunday:</strong> 10:00 AM - 4:00 PM (local time)</p>
+    <p class="text"><strong>For urgent assistance outside of these hours, please call our 24/7 helpline at +1 (555) 123-4567.</strong></p>
 
-        <div>
-
-        </div>
-        <p  class="text"><strong>For urgent assistance outside of these hours, please call our 24/7 helpline at +1 (555) 123-4567.</strong>></p>
-
-         <p  class="text"><strong>For more information follow us on <a href="{% url 'social' %}"><button>  click here </button></a></strong></p>
+    <div class="flight-card">
+        <h2>Flight to New York</h2>
+        <img src="https://th.bing.com/th?q=Flight+HD&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=strict&t=1&mw=247" alt="Flight to New York">
+        <p class="text">Experience the Big Apple with our flights to New York. Book now!</p>
     </div>
+
+    <div class="flight-card">
+        <h2>Flight to Paris</h2>
+        <img src="https://th.bing.com/th/id/OIP.Tz2TVlMqnMkCwYKysStpkAHaEo?w=307&h=191&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Flight to Paris">
+        <p class="text">Discover the romance of Paris with our convenient flights. Reserve your seat today!</p>
+    </div>
+
+     <div class="flight-card">
+        <h2>Flight to Paris</h2>
+        <img src="https://th.bing.com/th/id/OIP.Tz2TVlMqnMkCwYKysStpkAHaEo?w=307&h=191&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Flight to Paris">
+        <p class="text">Discover the romance of Paris with our convenient flights. Reserve your seat today!</p>
+    </div>
+
+    <!-- Add more flight cards as needed -->
+<div align="center">
+    <p class="text"><strong>For more information follow us on <a href="{% url 'social' %}"><button>  click here </button></a></strong></p>
+</div>
+</div>
 </body>
 </html>
